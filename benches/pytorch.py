@@ -15,8 +15,7 @@ from models.pytorch.linknet import linknet18
 def run(name, model, images):
     print(name)
 
-    net = model()
-    net = nn.DataParallel(net).cuda()
+    net = model().cuda()
     for j in range(config.NUM_BATCHES):
         net.forward(images)
 

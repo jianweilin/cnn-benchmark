@@ -1,5 +1,5 @@
 #!/bin/bash
 
-python -m benches.pytorch
-python -m benches.tensorflow
-python -m benches.keras
+CUDA_VISIBLE_DEVICES=0 python -m benches.pytorch
+CUDA_VISIBLE_DEVICES=0 python -m benches.tensorflow
+CUDA_VISIBLE_DEVICES=0 python -m benches.keras
